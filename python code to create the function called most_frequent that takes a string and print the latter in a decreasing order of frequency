@@ -1,0 +1,10 @@
+import operator
+user_str=input("enter a string:")
+a=[]
+for j in user_str:
+    a.append(j)
+d={}
+for i in a:
+    d[i]=d.get(i,0)+1
+    sorted_d=(sorted(d.items(),key=operator.itemgetter(1),reverse=True))
+print(sorted_d)
